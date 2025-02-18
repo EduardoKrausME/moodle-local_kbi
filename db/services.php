@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die;
 
 $functions = [
     "local_kbi_cat_sortorder" => [
-        "classpath" => "local/kopere_bi/classes/external/categorie.php",
+        "classpath" => "local/kbi/classes/external/categorie.php",
         "classname" => "\\local_kbi\\external\\categorie",
         "methodname" => "sortorder",
         "description" => "Saves the sortorder of the categories",
@@ -35,7 +35,7 @@ $functions = [
         "capabilities" => "local/kopere_dashboard:view",
     ],
     "local_kbi_block_sequence" => [
-        "classpath" => "local/kopere_bi/classes/external/block.php",
+        "classpath" => "local/kbi/classes/external/block.php",
         "classname" => "\\local_kbi\\external\\block",
         "methodname" => "sequence",
         "description" => "Saves the sequence of blocks on the page",
@@ -44,7 +44,7 @@ $functions = [
         "capabilities" => "local/kopere_dashboard:view",
     ],
     "local_kbi_block_delete" => [
-        "classpath" => "local/kopere_bi/classes/external/block.php",
+        "classpath" => "local/kbi/classes/external/block.php",
         "classname" => "\\local_kbi\\external\\block",
         "methodname" => "delete",
         "description" => "Deletes a block from the page",
@@ -53,7 +53,7 @@ $functions = [
         "capabilities" => "local/kopere_dashboard:view",
     ],
     "local_kbi_block_add" => [
-        "classpath" => "local/kopere_bi/classes/external/block.php",
+        "classpath" => "local/kbi/classes/external/block.php",
         "classname" => "\\local_kbi\\external\\block",
         "methodname" => "add",
         "description" => "Adds a new block to the page",
@@ -62,7 +62,7 @@ $functions = [
         "capabilities" => "local/kopere_dashboard:view",
     ],
     "local_kbi_online_update" => [
-        "classpath" => "local/kopere_bi/classes/external/online_update.php",
+        "classpath" => "local/kbi/classes/external/online_update.php",
         "classname" => '\local_kbi\external\online_update',
         "methodname" => "api",
         "description" => 'Records the time spent by a user for the dashboard',
@@ -70,7 +70,7 @@ $functions = [
         "ajax" => true,
     ],
     "local_kbi_page_html" => [
-        "classpath" => "local/kopere_bi/classes/external/page_html.php",
+        "classpath" => "local/kbi/classes/external/page_html.php",
         "classname" => '\local_kbi\external\page_html',
         "methodname" => "api",
         "description" => 'Records the time spent by a user for the dashboard',

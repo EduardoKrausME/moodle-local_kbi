@@ -114,7 +114,7 @@ class maps implements i_type {
         $param = ["item_id" => $koperebielement->id, "theme" => $koperebielement->theme];
         $url = urlencode(local_kdashboard_makeurl("bi-chart_data", "load_data", $param, "view-ajax"));
 
-        $urlresource = urlencode("{$CFG->wwwroot}/local/kopere_bi/maps/resource/");
+        $urlresource = urlencode("{$CFG->wwwroot}/local/kbi/maps/resource/");
 
         return "
             <iframe id='maps-online-{$id}'
@@ -122,7 +122,7 @@ class maps implements i_type {
                     width='100%' height='525' frameborder='0' allowfullscreen
                     sandbox='allow-scripts allow-same-origin allow-popups'
                     allow=':encrypted-media; :picture-in-picture'
-                    src='{$CFG->wwwroot}/local/kopere_bi/maps/?wwwroot={$url}&resource={$urlresource}'></iframe>
+                    src='{$CFG->wwwroot}/local/kbi/maps/?wwwroot={$url}&resource={$urlresource}'></iframe>
             <script>
                 var maps = document.getElementById('maps-online-{$id}');
                 var newHeight = 525 * maps.offsetWidth / 1000;
@@ -143,7 +143,7 @@ class maps implements i_type {
     public function get_chart_data($koperebielement) {
         global $CFG;
 
-        require_once($CFG->dirroot . "/local/kopere_bi/lib.php");
+        require_once($CFG->dirroot . "/local/kbi/lib.php");
 
         $comand = sql_util::prepare_sql($koperebielement->commandsql);
         try {

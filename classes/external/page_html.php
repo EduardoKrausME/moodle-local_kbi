@@ -81,10 +81,10 @@ class page_html extends external_api {
     public static function api($pageid) {
         global $DB, $CFG, $OUTPUT, $PAGE;
 
-        require_capability("local/kopere_bi:view", \context_system::instance());
+        require_capability("local/kbi:view", \context_system::instance());
 
         require_once("{$CFG->dirroot}/local/kopere_dashboard/autoload.php");
-        require_once("{$CFG->dirroot}/local/kopere_bi/lib.php");
+        require_once("{$CFG->dirroot}/local/kbi/lib.php");
 
         $text = "";
 
@@ -137,7 +137,7 @@ class page_html extends external_api {
             $js .= "{$returnitem}\n";
         }
 
-        $return .= load_kopere_bi_assets();
+        $return .= load_kbi_assets();
         $return .= "\n\n<script>{$js}</script>";
 
         return ["html" => $return];

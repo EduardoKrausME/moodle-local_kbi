@@ -87,7 +87,7 @@ class online_update extends external_api {
         ]);
 
         $context = \context_user::instance($USER->id);
-        require_capability("local/kopere_bi:view", $context);
+        require_capability("local/kbi:view", $context);
         self::validate_context($context);
 
         if (isset($USER->koperebionline_time[$params["cache_key"]])) {

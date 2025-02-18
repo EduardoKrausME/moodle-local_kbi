@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die;
 global $removetitle;
 if (!$removetitle) {
     $settings->add(
-        new admin_setting_heading("kopere_bi_title", get_string("pluginname", "local_kbi"), "")
+        new admin_setting_heading("kbi_title", get_string("pluginname", "local_kbi"), "")
     );
 }
 

@@ -77,11 +77,11 @@ function local_kbi_iplookup_find_location($ip) {
 }
 
 /**
- * Function load_kopere_bi_assets
+ * Function load_kbi_assets
  *
  * @return string
  */
-function load_kopere_bi_assets() {
+function load_kbi_assets() {
     static $koperebiloaded = false;
 
     if (!$koperebiloaded) {
@@ -104,12 +104,12 @@ function load_kopere_bi_assets() {
  * @throws coding_exception
  * @throws dml_exception
  */
-function load_kopere_bi($pageid) {
+function load_kbi($pageid) {
     global $DB, $CFG;
 
     require_once("{$CFG->dirroot}/local/kopere_dashboard/autoload.php");
 
-    $text = load_kopere_bi_assets();
+    $text = load_kbi_assets();
 
     $text .= "<div class='kopere_dashboard_div'>";
     $text .= "<div class='content-w'>";
@@ -146,12 +146,12 @@ function load_kopere_bi($pageid) {
  * @return string
  * @throws Exception
  */
-function load_kopere_bi_ajax($coursemoduleid, $pageid) {
+function load_kbi_ajax($coursemoduleid, $pageid) {
     global $CFG;
 
     require_once("{$CFG->dirroot}/local/kopere_dashboard/autoload.php");
 
-    $text = load_kopere_bi_assets();
+    $text = load_kbi_assets();
     $text .= "<div class='kopere_dashboard_div-ajax'
                    id='kopere_dashboard_div-coursemodule_{$coursemoduleid}'
                    data-koperebi='{$pageid}'>" . get_string("loading", "local_kbi") . "</div>";

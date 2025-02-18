@@ -81,7 +81,7 @@ class categorie extends external_api {
         ]);
 
         $context = \context_system::instance();
-        require_capability("local/kopere_bi:manage", $context);
+        require_capability("local/kbi:manage", $context);
         self::validate_context($context);
 
         $elements = explode(",", $params["itens"]);

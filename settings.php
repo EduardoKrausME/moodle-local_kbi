@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 if ($hassiteconfig) {
-    $settings = new admin_settingpage("kopere_bi", get_string("pluginname", "local_kbi"));
+    $settings = new admin_settingpage("kbi", get_string("pluginname", "local_kbi"));
     $ADMIN->add("localplugins", $settings);
 
     if (!$ADMIN->locate("integracaoroot")) {
@@ -47,7 +47,7 @@ if ($ADMIN->fulltree) {
         require(__DIR__ . "/settings_kopere.php");
 
         $settings->add(
-            new admin_setting_heading("kopere_bi_title", "", "")
+            new admin_setting_heading("kbi_title", "", "")
         );
     }
 }

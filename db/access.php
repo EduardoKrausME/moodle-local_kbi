@@ -25,14 +25,14 @@
 defined('MOODLE_INTERNAL') || die;
 
 $capabilities = [
-    'local/kopere_bi:view' => [
+    'local/kbi:view' => [
         "captype" => "write",
         "contextlevel" => CONTEXT_SYSTEM,
         "archetypes" => [
             "manager" => CAP_ALLOW,
         ],
     ],
-    'local/kopere_bi:manage' => [
+    'local/kbi:manage' => [
         "captype" => "write",
         "contextlevel" => CONTEXT_SYSTEM,
         "archetypes" => [

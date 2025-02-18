@@ -82,7 +82,7 @@ class block extends external_api {
             "itens" => $elements,
         ]);
         $context = \context_system::instance();
-        require_capability("local/kopere_bi:manage", $context);
+        require_capability("local/kbi:manage", $context);
         self::validate_context($context);
 
         $elements = explode(",", $params["itens"]);
@@ -148,7 +148,7 @@ class block extends external_api {
             "block_id" => $blockid,
         ]);
         $context = \context_system::instance();
-        require_capability("local/kopere_bi:manage", $context);
+        require_capability("local/kbi:manage", $context);
         self::validate_context($context);
 
         /** @var local_kbi_block $koperebiblock */
@@ -217,7 +217,7 @@ class block extends external_api {
             "type" => $type,
         ]);
         $context = \context_system::instance();
-        require_capability("local/kopere_bi:manage", $context);
+        require_capability("local/kbi:manage", $context);
         self::validate_context($context);
 
         $PAGE->set_context(\context_system::instance());

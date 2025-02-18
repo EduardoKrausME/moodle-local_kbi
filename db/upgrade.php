@@ -65,7 +65,7 @@ function xmldb_local_kbi_upgrade($oldversion) {
         require_once("db-config.php");
         reset_bi_reports();
 
-        upgrade_plugin_savepoint(true, 2025011001, "local", "kopere_bi");
+        upgrade_plugin_savepoint(true, 2025011001, "local", "kbi");
     }
 
     return true;
