@@ -1,0 +1,29 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", {"packages": ["corechart"]});
+    google.charts.setOnLoadCallback(drawCopy_{{{koperebiitem_id}}});
+
+    function drawCopy_{{{koperebiitem_id}}}() {
+        var data = google.visualization.arrayToDataTable([ {{{arrayCopys}}} ]);
+
+        var options = {
+            backgroundColor: "transparent",
+            width: "100%",
+            legend: {position: "right"},
+            curveType: "function",
+            chartArea: {
+                backgroundColor: "transparent",
+                right: 0,
+                left: 60,
+            }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById("line_{{{koperebiitem_id}}}"));
+        chart.draw(data, options);
+    }
+
+    window.addEventListener("resize", function() {
+        timeout_drawCopy_{{{koperebiitem_id}}} = setTimeout(drawCopy_{{{koperebiitem_id}}}, 500)
+    }, false);
+</script>
+<div id="line_{{{koperebiitem_id}}}" style="height: 400px;"></div>

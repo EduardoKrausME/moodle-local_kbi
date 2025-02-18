@@ -1,0 +1,29 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", {"packages": ["bar"]});
+    google.charts.setOnLoadCallback(drawColumns_{{{koperebiitem_id}}});
+
+    function drawColumns_{{{koperebiitem_id}}}() {
+        var data = google.visualization.arrayToDataTable([{{{arraycolumnss}}}]);
+
+        var options = {
+            backgroundColor: "transparent",
+            width: "100%",
+            legend: {position: "right"},
+            curveType: "function",
+            chartArea: {
+                backgroundColor: "transparent",
+                right: 0,
+                left: 60,
+            }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById("columns_{{{koperebiitem_id}}}"));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+
+    window.addEventListener("resize", function() {
+        timeout_drawColumns_{{{koperebiitem_id}}} = setTimeout(drawColumns_{{{koperebiitem_id}}}, 500)
+    }, false);
+</script>
+<div id="columns_{{{koperebiitem_id}}}" style="height: 400px;"></div>
